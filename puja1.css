@@ -1,0 +1,955 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables */
+:root {
+    --primary-color: #ffb03b;
+    --text-color: black;
+    --bg-color: white;
+    --hover-color: black; /* Updated hover color for navbar */
+}
+
+/* Main Styles */
+body {
+    font-family: 'Garamond', serif;
+    background-color: #f7f3e9;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.header-left h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.header-left h3:hover {
+    color: var(--hover-color); /* Changes color to black on hover */
+}
+
+
+.header-right ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.header-right ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    transition: color 0.3s;
+    font-family: 'Garamond', serif;
+}
+
+.header-right ul li a:hover {
+    color: var(--hover-color); /* Navbar hover color updated to black */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--hover-color);
+}
+
+/* Main Content */
+.content {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-section img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details-section {
+    flex: 2;
+}
+
+.details-section h1 {
+    /* color: var(--primary-color); */
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+.details-section p {
+    margin-bottom: 1rem;
+}
+
+/* Countdown Timer */
+.countdown {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.countdown img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+}
+
+
+.devotee-count {
+    margin-top: 10px; /* Adjust the value as needed */
+}
+
+/* Button Styling */
+.button-container {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.button-container button {
+    background-color: #ff5722; /* Color for "Select Puja" button */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Garamond', serif;
+}
+
+.button-container button:hover {
+    background-color: #e64a19;
+}
+
+/* Tabs Section */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #ffd586;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.tabs button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.tabs button:hover {
+    color: var(--primary-color);
+}
+
+/* Section About Puja */
+.about-section {
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.about-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Notification */
+.notification {
+    background-color: #2db92d;
+    color: white;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+
+/* tabs section */
+
+
+/* Moving Text Section */
+/* Moving Text Section */
+.moving-text-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%; /* Full-width wrapper */
+}
+
+.moving-text-section {
+    display: flex;
+    gap: 50px; /* Adds space between each line */
+    animation: scrollText 27s linear infinite;
+}
+
+.moving-text-section p {
+    flex: none; /* Prevents flex items from resizing */
+    font-size: 1.2em;
+    white-space: nowrap;
+}
+
+/* Animation for smooth scrolling */
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+
+
+
+/* beenfits section */
+
+
+/* Benefits of Puja Section */
+.benefits-of-puja {
+    background-color: white;
+    padding: 40px; /* Increased padding for more space around the content */
+    text-align: center;
+    color: black;
+}
+
+.benefits-of-puja h2 {
+    color: #ff5722;
+    font-size: 2.5em; /* Increased font size */
+    margin-bottom: 30px; /* Increased bottom margin */
+}
+
+.benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between the cards */
+    justify-content: center;
+}
+
+.benefit-card {
+    background-color: white;
+    border: 2px solid #ffb03b;
+    border-radius: 8px;
+    width: 45%; /* Adjusted width to ensure two cards per row */
+    padding: 30px; /* Increased padding inside the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    box-sizing: border-box;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover effect */
+}
+
+.benefit-card:hover {
+    transform: translateY(-15px); /* Move the card up */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increased shadow effect on hover */
+}
+
+.benefit-card .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Space below the icon */
+    background-color: #ffb03b; /* Background color for the icon */
+}
+
+.benefit-card .icon i {
+    color: white; /* Icon color */
+    font-size: 28px; /* Icon size */
+}
+
+.benefit-card h3 {
+    color: #ff5722;
+    font-size: 1.6em; /* Increased font size for the heading */
+    margin: 0;
+    margin-bottom: 10px; /* Added margin below heading */
+    text-align: center; /* Center the heading */
+}
+
+.benefit-card p {
+    color: black;
+    font-size: 1.1em; /* Increased font size for better readability */
+    line-height: 1.6; /* Increased line height for better spacing between lines */
+    text-align: justify; /* Justify the paragraph for a clean layout */
+}
+
+/* Benefits of Puja Section Hover Effects */
+.benefit-card:hover {
+    transform: translateY(-15px); /* Move the card up further */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increase shadow effect on hover */
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+    .benefit-card {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Participate Card Styles */
+.participate-section {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto; /* Center the entire section on the page */
+}
+
+.participate-section h2 {
+    font-size: 2.5em;
+    color: #b54123;
+    margin-bottom: 20px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping to ensure all cards stay in one line */
+    justify-content: center; /* Center-align cards */
+    overflow-x: auto; /* Allow horizontal scrolling if cards overflow */
+    padding: 0 20px; /* Optional: Add padding for better aesthetics */
+}
+
+.participate-card {
+    background-color: #ffb03b;
+    border-radius: 10px;
+    padding: 20px;
+    width: 320px; /* Increase width to make cards wider */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px; /* Add spacing between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect on hover */
+    min-height: 420px; /* Set a minimum height for all cards */
+    box-sizing: border-box;
+}
+
+.participate-card:hover {
+    transform: scale(1.05) translateY(-10px); /* Enlarge and move the card up */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.participate-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.participate-card .price {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ff5722; /* Change this to match the button color or any other theme color */
+    text-align: center; /* Center align the price */
+    width: 100%; /* Make price take full width */
+}
+
+.participate-card ul {
+    font-size: 1.1em;
+    list-style-type: none;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allows content to take up remaining space */
+    padding-left: 0; /* Remove default padding for list items */
+}
+
+.participate-card ul li {
+    margin-bottom: 8px;
+}
+
+.participate-card button {
+    width: 100%; /* Makes the button take full width */
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    margin-top: auto; /* Pushes button to the bottom */
+}
+
+.participate-card button:hover {
+    background-color: #d84315;
+}
+
+
+/* how it works section */
+
+/* Container Styles */
+.how-it-works {
+    text-align: center;
+    padding: 40px;
+    background-color: #fdf6ef;
+    position: relative;
+}
+
+.how-it-works h2 {
+    font-size: 2em;
+    color: #c24619;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block; /* Center-aligns and allows closer decoration */
+}
+
+.how-it-works h2::before,
+.how-it-works h2::after {
+    content: "✧";
+    font-size: 1.5em;
+    color: #c24619;
+    position: absolute;
+    top: -13px;
+}
+
+.how-it-works h2::before {
+    right: 100%; /* Positions directly left of the heading */
+    margin-right: 13px; /* Controls spacing between symbol and heading */
+}
+
+.how-it-works h2::after {
+    left: 100%; /* Positions directly right of the heading */
+    margin-left: 13px; /* Controls spacing between symbol and heading */
+}
+
+/* Steps Container */
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Step Styles */
+.step {
+    text-align: center;
+    max-width: 180px;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+    padding: 10px; /* Add some padding for better visual */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.step:hover {
+    background-color: #ffebcd; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly scale the element */
+}
+
+.icon svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+}
+
+.step p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Divider Styles */
+.divider {
+    height: 2px;
+    width: 50px;
+    background-color: #c24619;
+    margin: 0 20px;
+}
+
+
+
+/* faqs section */
+.faq-section {
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 2.5rem;
+    color: #ff5722;
+    margin-bottom: 0.5rem;
+    font-family: 'Georgia', serif;
+}
+
+.faq-section p {
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item {
+    width: 100%; /* Ensure the item takes full width */
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    margin: 0; /* Remove margin to allow full width */
+}
+
+.faq-question {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: none;
+    width: 100%; /* Set width to 100% */
+    text-align: left;
+    padding: 1.2rem;
+    font-size: 1.2rem; /* Increased font size for the question */
+    font-weight: bold; /* Added bold to make it more prominent */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+    margin: 0; /* Remove margin to use full width */
+}
+
+
+.faq-question:hover {
+    background-color: #ffb03b;
+}
+
+.faq-question::after {
+    content: "▼";
+    font-size: 1.2rem;
+    color: #ff5722;
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.3s;
+}
+
+.faq-question.active::after {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    display: none;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 1.2rem;
+    font-size: 1.1rem; /* Increased font size for the answer */
+    border-top: 1px solid #ddd;
+}
+
+.faq-question.active {
+    background-color: #ffb03b;
+    color: #ffffff;
+}
+
+
+/* Devotee Corner */
+/* Devotee Corner */
+.devotee-corner {
+    text-align: center;
+    color: #ff5722;
+    margin-bottom: 40px; /* Increased bottom margin for spacing */
+    position: relative; /* For positioning pseudo-elements */
+    padding: 40px; /* Add padding for better spacing */
+    background-color: #fdf6ef; /* Background color to match the design */
+}
+
+.devotee-corner h2 {
+    font-size: 2.5em; /* Increased font size */
+    color: #c24619; /* Change color to match your design */
+    margin: 0; /* Remove default margin */
+    display: inline-block; /* Center-aligns and allows closer decoration */
+    position: relative; /* For positioning pseudo-elements */
+    font-weight: bold; /* Bold heading */
+    margin-bottom: 20px; /* Space between heading and testimonial boxes */
+}
+
+/* Decorative symbols before and after the heading */
+.devotee-corner h2::before,
+.devotee-corner h2::after {
+    content: "✧"; /* Symbol to use for decoration */
+    font-size: 1.5em; /* Size of the decorative symbols */
+    color: #c24619; /* Color of the symbols */
+    position: absolute;
+    top: -13px; /* Position relative to the heading */
+}
+
+.devotee-corner h2::before {
+    right: 100%; /* Positions directly left of the heading */
+    margin-right: 13px; /* Controls spacing between symbol and heading */
+}
+
+.devotee-corner h2::after {
+    left: 100%; /* Positions directly right of the heading */
+    margin-left: 13px; /* Controls spacing between symbol and heading */
+}
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px; /* Increased padding for larger boxes */
+    width: 400px; /* Increased width of boxes */
+    height: auto; /* Changed to auto to allow height adjustment based on content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: left;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transition for hover effect */
+    display: flex;
+    flex-direction: column; /* Flex direction to stack content */
+    justify-content: space-between; /* Space between content for consistent height */
+}
+
+/* Increase the font size of testimonial heading and content */
+.testimonial h3 {
+    color: #333;
+    margin: 0 0 10px;
+    font-size: 1.5em; /* Increased font size */
+}
+
+.testimonial p {
+    font-size: 1.1em; /* Increased font size */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allow paragraph to grow and take available space */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px; /* Space between testimonial content and profile */
+}
+
+.profile img {
+    border-radius: 50%;
+    border: 2px solid #ff5722;
+    width: 50px; /* Adjusted image size */
+    height: 50px; /* Adjusted image size */
+}
+
+.profile .details {
+    color: #333;
+    text-align: left;
+}
+
+.profile .name {
+    font-weight: bold;
+    color: black;
+    font-size: 1em; /* Adjust font size for the name */
+}
+
+.profile p {
+    margin: 0;
+    font-size: 0.9em; /* Font size for the source of review */
+    color: #777;
+}
+
+.stars {
+    color: #ffb03b;
+    font-size: 1em; /* Font size for star rating */
+    margin-top: 5px;
+}
+
+/* Add hover effect for testimonial boxes */
+.testimonial:hover {
+    box-shadow: 0 4px 20px rgba(255, 87, 34, 0.5); /* Shadow effect on hover */
+    transform: translateY(-10px); /* Move up more on hover */
+}
+
+/* Arrow effect */
+.testimonial::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #ddd transparent transparent transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer section */
+/* Footer Styles */
+#footer {
+    background-color: #fdf6ef; /* Match the background color used previously */
+    color: #333; /* Dark text for readability */
+    padding: 40px 0; /* Top and bottom padding for spacing */
+    text-align: center; /* Center align text */
+}
+
+#footer h3 {
+    font-size: 2em; /* Increase heading size */
+    color: #c24619; /* Match the color from previous sections */
+    margin-bottom: 15px; /* Space below heading */
+    font-weight: bold; /* Bold heading */
+}
+
+#footer p {
+    font-size: 1.1em; /* Slightly larger font for the paragraph */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 20px; /* Space below paragraph */
+}
+
+.social-links {
+    margin-bottom: 20px; /* Space below social links */
+}
+.social-links a {
+    font-size: 1.5em; /* Size of the social media icons */
+    color: #ff5722; /* Color of the icons */
+    margin: 0 10px; /* Space between icons */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+
+.social-links a:hover {
+    color: #c24619; /* Change color on hover */
+}
+
+
+.copyright {
+    font-size: 0.9em; /* Smaller font size for copyright text */
+    color: #777; /* Lighter color for contrast */
+    margin-top: 10px; /* Space above copyright text */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    #footer h3 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+
+    .social-links a {
+        font-size: 1.2em; /* Adjust icon size for smaller screens */
+    }
+}
+
+
+
+
+.header-left a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the text color from the parent */
+}
+
+
+
+
+
+
+
+
+/* Mobile Devices - Up to 600px */
+@media (max-width: 600px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header-left h3 {
+        font-size: 1.2em;
+    }
+
+    .header-right ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Content Section */
+    .content {
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+    }
+
+    .image-section img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .details-section h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .details-section p {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    /* Benefits of Puja */
+    .benefit-card {
+        width: 100%;
+    }
+
+    /* Participate Cards */
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align the cards in the container */
+        padding: 0;
+    }
+
+    .participate-card {
+        width: 90%; /* Increase card width to 90% of the container */
+        margin: 10px auto; /* Center the card within the container */
+    }
+
+    /* Footer */
+    #footer h3 {
+        font-size: 1.5em;
+    }
+
+    .social-links a {
+        font-size: 1.2em;
+    }
+    .left-aligned-details {
+        text-align: left;
+        padding-left: 10px; /* Optional padding for spacing */
+    }
+
+    .left-aligned-details p,
+    .left-aligned-details .countdown {
+        margin-left: 0;
+        text-align: left;
+    }
+}
+
+/* Tablets - Up to 768px */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    /* Benefits of Puja */
+    .benefit-card {
+        width: 100%;
+    }
+
+    /* Participate Cards */
+    .cards-container {
+        flex-wrap: wrap;
+    }
+
+    .participate-card {
+        width: 48%;
+        margin: 10px 1%;
+    }
+
+    /* How it Works */
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Footer */
+    .social-links a {
+        font-size: 1.2em;
+    }
+}
+
+/* Small Desktops - Up to 992px */
+@media (max-width: 992px) {
+    .content {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    /* Benefits of Puja */
+    .benefit-card {
+        width: 48%;
+    }
+
+    /* Participate Cards */
+    .cards-container {
+        flex-wrap: wrap;
+    }
+
+    .participate-card {
+        width: 48%;
+    }
+
+    /* Footer */
+    .social-links a {
+        font-size: 1.4em;
+    }
+}
